@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Колекция ZBM21</title>
+
+  <!-- Firebase App (compat mode) -->
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-database-compat.js"></script>
+
+  <!-- Link to external CSS -->
+  <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+  <h1 class="title">Колекция ZBM21</h1>
+  <div class="container">
+    <div class="grid">
+      <div class="card">
+        <div class="image-container">
+          <img src="images/shirt1-1.png" alt="Готина тениска" class="image" id="shirt1-image">
+          <button class="arrow arrow-left" onclick="changeImage('shirt1', -1, 4)">&#10094;</button>
+          <button class="arrow arrow-right" onclick="changeImage('shirt1', 1, 4)">&#10095;</button>
+        </div>
+        <h2 class="name">ZBM21 официална тениска</h2>
+        <button class="order-button" onclick="openPopup()">Поръчай</button>
+      </div>
+      <div class="card">
+        <div class="image-container">
+          <img src="images/shirt2-1.png" alt="Готина тениска" class="image" id="shirt2-image">
+          <button class="arrow arrow-left" onclick="changeImage('shirt2', -1, 2)">&#10094;</button>
+          <button class="arrow arrow-right" onclick="changeImage('shirt2', 1, 2)">&#10095;</button>
+        </div>
+        <h2 class="name">Официално худи</h2>
+        <button class="order-button" onclick="openPopup()">Поръчай</button>
+      </div>
+      <div class="card">
+        <div class="image-container">
+          <img src="images/shirt3-1.png" alt="Готина тениска" class="image" id="shirt3-image">
+          <button class="arrow arrow-left" onclick="changeImage('shirt3', -1, 2)">&#10094;</button>
+          <button class="arrow arrow-right" onclick="changeImage('shirt3', 1, 2)">&#10095;</button>
+        </div>
+        <h2 class="name">Официална тениска V2</h2>
+        <button class="order-button" onclick="openPopup()">Поръчай</button>
+      </div>
+    </div>
+  </div>
+
+  <button class="admin-button" onclick="location.href='admin.html'">Административен панел</button>
+
+  <div class="popup" id="popup">
+    <h2>Детайли на поръчката</h2>
+    <input type="text" placeholder="Име" id="name">
+    <button onclick="saveOrder()">Запази</button>
+    <button onclick="closePopup()">Затвори</button>
+  </div>
+
+  <script src="js/index.js"></script>
+  <footer>Собственици: Емир Кемал и Стилян Панджаров</footer>
+</body>
+</html>

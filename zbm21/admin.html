@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Panel</title>
+
+  <!-- Firebase Scripts -->
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-database-compat.js"></script>
+
+  <!-- Link to External CSS -->
+  <link rel="stylesheet" href="css/admin.css">
+</head>
+
+<body>
+
+  <div class="container" id="login-container">
+    <h2>ZBM admin page</h2>
+    <input type="text" id="admin-username" class="input-box" placeholder="Име">
+    <input type="password" id="admin-password" class="input-box" placeholder="Парола">
+    <button onclick="adminLogin()">Влез</button>
+  </div>
+
+  <div class="container" id="dashboard" style="display: none;">
+    <h2>Order List</h2>
+    <button class="logout-button" onclick="logout()">Излез</button>
+    <div class="orders" id="orders"></div>
+  </div>
+
+  <!-- Link to External JavaScript -->
+  <script src="js/admin.js"></script>
+</body>
+
+</html>
