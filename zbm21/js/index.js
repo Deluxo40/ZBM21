@@ -28,7 +28,7 @@ const firebaseConfig = {
     const name = document.getElementById("name").value;
     const surname = document.getElementById("surname").value;
     const phone = document.getElementById("phone").value;
-    const address = document.getElementById("address").value;
+    const address = document.getElementById("adress").value;
   
     if (name && surname && phone && address) {
       const order = {
